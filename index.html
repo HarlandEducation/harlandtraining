@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harland Teacher Onboarding | Training Centre</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-badge">H</div>
+      <div class="header-text">
+        <h1 class="site-title">Harland Teacher Training</h1>
+        <p class="site-subtitle">New Teacher Onboarding Centre</p>
+      </div>
+      <div class="progress-pill" id="headerProgress">Module 1 of 6</div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">New Teacher Orientation</div>
+      <h2 class="hero-title">Welcome to the<br><span class="gold">Harland Team.</span></h2>
+      <p class="hero-desc">This training walks you through every system, platform, and standard you need before your first class. Complete each module, pass the knowledge checks, and earn your onboarding certificate.</p>
+      <div class="hero-stats">
+        <div class="stat-pill">📋 6 Modules</div>
+        <div class="stat-pill">⏱ ~45 mins</div>
+        <div class="stat-pill">✅ Self-paced</div>
+        <div class="stat-pill">🏅 Certificate on completion</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="module-nav-section">
+    <div class="container">
+      <div class="module-tabs" id="moduleTabs">
+        <button class="tab-btn active" data-module="0">1. Teachworks</button>
+        <button class="tab-btn" data-module="1">2. Class Notes & Completion</button>
+        <button class="tab-btn" data-module="2">3. Curricula & Writing</button>
+        <button class="tab-btn" data-module="3">4. Learning Platforms</button>
+        <button class="tab-btn" data-module="4">5. Tech Tools</button>
+        <button class="tab-btn" data-module="5">6. Final Check</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="main-content">
+    <div class="container">
+      <div class="content-grid">
+        <div class="module-info-panel" id="moduleInfoPanel"></div>
+        <div class="quiz-panel">
+          <div class="quiz-card">
+            <div class="quiz-header">
+              <span class="quiz-tag">Knowledge Check</span>
+              <span class="quiz-counter" id="quizCounter">Question 1 of 3</span>
+            </div>
+            <div id="quizArea"></div>
+            <div class="quiz-actions">
+              <button class="btn-secondary" id="btnSkip">Skip</button>
+              <button class="btn-primary" id="btnSubmit">Check Answer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="results-section" id="resultsSection" style="display:none;">
+        <h3 class="section-heading">Your Progress Dashboard</h3>
+        <div class="results-grid" id="resultsGrid"></div>
+        <div class="certificate-banner" id="certificateBanner" style="display:none;">
+          <div class="cert-icon">🏅</div>
+          <div class="cert-text">
+            <strong>Congratulations! You've completed all 6 modules.</strong>
+            <p>You're officially ready to teach at Harland. Your supervisor will be notified.</p>
+          </div>
+          <button class="btn-gold" onclick="window.print()">Print Certificate</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Harland Education · Teacher Training Centre · All materials are confidential</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
