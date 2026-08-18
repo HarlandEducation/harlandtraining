@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 1 — Persuasive Body Paragraphs | Harland Education</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --obsidian:#15141a;
+    --obsidian-soft:#3d3b44;
+    --parchment:#faf6ed;
+    --parchment-deep:#f1ead9;
+    --gold:#ab8a3e;
+    --gold-deep:#8a6d28;
+    --gold-pale:#ecdfc0;
+    --line:#ded2b3;
+    --maroon:#7a4632;
+    --radius:3px;
+    --hl-topic:#e3c680;
+    --hl-topic-soft:rgba(227,198,128,0.55);
+    --hl-reasons:#9dc08b;
+    --hl-reasons-soft:rgba(157,192,139,0.45);
+    --hl-evidence:#b79fd4;
+    --hl-evidence-soft:rgba(183,159,212,0.4);
+    --hl-conclude:#e7b8ae;
+    --hl-conclude-soft:rgba(231,184,174,0.55);
+  }
+
+  *{box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:var(--parchment);
+    color:var(--obsidian-soft);
+    font-family:'DM Sans', sans-serif;
+    font-size:16px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  ::selection{ background:var(--gold-pale); color:var(--obsidian); }
+
+  .page{
+    max-width:760px;
+    margin:0 auto;
+    padding:0 28px 96px;
+  }
+
+  /* ---------- Header ---------- */
+
+  header.masthead{
+    padding:56px 0 40px;
+    text-align:center;
+  }
+
+  .wordmark{
+    font-family:'DM Sans', sans-serif;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:0.32em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+  }
+
+  .wordmark span{
+    display:block;
+    margin-top:4px;
+    font-size:10px;
+    font-weight:400;
+    letter-spacing:0.24em;
+    color:var(--obsidian-soft);
+    opacity:0.6;
+  }
+
+  .rule{
+    width:56px;
+    height:1px;
+    background:var(--gold);
+    margin:22px auto;
+  }
+
+  .eyebrow{
+    font-family:'DM Sans', sans-serif;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin:0 0 14px;
+  }
+
+  h1.title{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(38px, 6vw, 54px);
+    line-height:1.08;
+    color:var(--obsidian);
+    margin:0;
+    letter-spacing:0.01em;
+  }
+
+  .lede{
+    max-width:560px;
+    margin:26px auto 0;
+    font-size:16.5px;
+    line-height:1.85;
+    color:var(--obsidian-soft);
+  }
+
+  /* ---------- Section scaffolding ---------- */
+
+  section{ margin-top:76px; }
+
+  header.masthead + section{ margin-top:36px; }
+
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin-bottom:22px;
+  }
+
+  .section-num{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:20px;
+    color:var(--gold-deep);
+    white-space:nowrap;
+  }
+
+  h2.section-title{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:30px;
+    color:var(--obsidian);
+    margin:0;
+    flex:1;
+  }
+
+  h2.section-title::after{
+    content:"";
+    display:block;
+    height:1px;
+    background:var(--line);
+    margin-top:14px;
+  }
+
+  p{ margin:0 0 18px; }
+  p:last-child{ margin-bottom:0; }
+
+  /* ---------- Structure triptych ---------- */
+
+  .triptych{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin:30px 0;
+  }
+
+  .triptych .panel{
+    background:var(--parchment);
+    padding:26px 22px;
+  }
+
+  .panel-num{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:34px;
+    color:var(--gold);
+    line-height:1;
+    display:block;
+    margin-bottom:10px;
+  }
+
+  .panel-title{
+    font-family:'DM Sans', sans-serif;
+    font-weight:700;
+    font-size:13px;
+    letter-spacing:0.04em;
+    color:var(--obsidian);
+    margin-bottom:8px;
+  }
+
+  .panel-list{
+    margin:0;
+    padding-left:18px;
+    font-size:14px;
+    color:var(--obsidian-soft);
+  }
+
+  .panel-list li{ margin-bottom:4px; }
+
+  .dot{
+    display:inline-block;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    margin-right:6px;
+  }
+  .dot.topic{ background:var(--hl-topic); }
+  .dot.reasons{ background:var(--hl-reasons); }
+  .dot.evidence{ background:var(--hl-evidence); }
+  .dot.conclude{ background:var(--hl-conclude); }
+
+  /* ---------- Specimen cards ---------- */
+
+  .specimen{
+    background:var(--parchment-deep);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:0;
+    margin:26px 0;
+    position:relative;
+  }
+
+  .specimen-label{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 24px;
+    border-bottom:1px solid var(--line);
+  }
+
+  .specimen-tag{
+    font-family:'DM Sans', sans-serif;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+  }
+
+  .specimen-topic{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:15px;
+    color:var(--obsidian-soft);
+  }
+
+  .specimen-body{
+    padding:26px 24px 28px;
+    font-size:15.5px;
+    line-height:1.9;
+    color:var(--obsidian);
+  }
+
+  /* annotation legend + marks */
+  .mk-topic{ background:var(--hl-topic-soft); border-radius:2px; box-decoration-break:clone; -webkit-box-decoration-break:clone; padding:1px 2px; }
+  .mk-reasons{ background:var(--hl-reasons-soft); border-radius:2px; box-decoration-break:clone; -webkit-box-decoration-break:clone; padding:1px 2px; }
+  .mk-evidence{ background:var(--hl-evidence-soft); border-radius:2px; box-decoration-break:clone; -webkit-box-decoration-break:clone; padding:1px 2px; }
+  .mk-conclude{ background:var(--hl-conclude-soft); border-radius:2px; box-decoration-break:clone; -webkit-box-decoration-break:clone; padding:1px 2px; }
+
+  .legend{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    padding:14px 24px 20px;
+    font-size:12px;
+    color:var(--obsidian-soft);
+  }
+
+  .legend-item{ display:flex; align-items:center; gap:7px; }
+  .legend-swatch{ width:13px; height:13px; border-radius:2px; display:inline-block; }
+  .legend-swatch.topic{ background:var(--hl-topic); }
+  .legend-swatch.reasons{ background:var(--hl-reasons); }
+  .legend-swatch.evidence{ background:var(--hl-evidence); }
+  .legend-swatch.conclude{ background:var(--hl-conclude); }
+
+  /* ---------- Exercise blocks ---------- */
+
+  .exercise{
+    margin:34px 0;
+    padding-left:20px;
+    border-left:2px solid var(--gold-pale);
+  }
+
+  .exercise-marker{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-family:'DM Sans', sans-serif;
+    font-weight:700;
+    font-size:12px;
+    letter-spacing:0.06em;
+    color:var(--obsidian);
+    background:var(--gold-pale);
+    padding:4px 10px 4px 8px;
+    border-radius:2px;
+    margin-bottom:12px;
+  }
+
+  .exercise-prompt{
+    font-size:15px;
+    color:var(--obsidian-soft);
+    margin-bottom:16px;
+  }
+
+  .exercise-note{
+    font-size:13px;
+    font-style:italic;
+    color:var(--gold-deep);
+    margin-bottom:16px;
+  }
+
+  /* ---------- Highlighter toolbar ---------- */
+
+  .hl-toolbar{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:16px;
+  }
+
+  .hl-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    font-family:'DM Sans', sans-serif;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:0.03em;
+    color:var(--obsidian-soft);
+    background:var(--parchment);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:6px 14px 6px 10px;
+    cursor:pointer;
+    transition:border-color .15s, color .15s, background .15s;
+  }
+
+  .hl-btn::before{
+    content:"";
+    width:11px;
+    height:11px;
+    border-radius:50%;
+    display:inline-block;
+    background:var(--dot, var(--obsidian-soft));
+  }
+
+  .hl-btn[data-tool="topic"]{ --dot:var(--hl-topic); }
+  .hl-btn[data-tool="reasons"]{ --dot:var(--hl-reasons); }
+  .hl-btn[data-tool="evidence"]{ --dot:var(--hl-evidence); }
+  .hl-btn[data-tool="conclude"]{ --dot:var(--hl-conclude); }
+  .hl-btn[data-tool="clear"]::before{ background:transparent; border:1px solid var(--obsidian-soft); }
+
+  .hl-btn.active{
+    border-color:var(--obsidian);
+    background:var(--parchment-deep);
+    color:var(--obsidian);
+  }
+
+  .hl-sentence{
+    cursor:pointer;
+    border-radius:2px;
+    padding:1px 2px;
+    transition:background-color .12s;
+  }
+  .hl-sentence:hover{ background:var(--gold-pale); }
+  .hl-sentence.hl-topic{ background:var(--hl-topic-soft); }
+  .hl-sentence.hl-reasons{ background:var(--hl-reasons-soft); }
+  .hl-sentence.hl-evidence{ background:var(--hl-evidence-soft); }
+  .hl-sentence.hl-conclude{ background:var(--hl-conclude-soft); }
+
+  .clear-link{
+    background:none;
+    border:none;
+    font-family:'DM Sans', sans-serif;
+    font-size:12px;
+    font-weight:700;
+    color:var(--gold-deep);
+    text-decoration:underline;
+    cursor:pointer;
+    padding:0;
+    margin-bottom:16px;
+  }
+
+  /* ---------- Editable fields ---------- */
+
+  [contenteditable="true"]{ cursor:text; }
+
+  [contenteditable="true"]:empty:before{
+    content:attr(data-placeholder);
+    color:var(--obsidian-soft);
+    opacity:0.5;
+    font-style:italic;
+  }
+
+  .ruled.editable:focus{
+    outline:none;
+    border-color:var(--gold);
+    box-shadow:0 0 0 2px var(--gold-pale);
+  }
+
+  .blank-line.editable{
+    outline:none;
+  }
+  .blank-line.editable:focus{
+    border-bottom-color:var(--gold);
+    background:var(--gold-pale);
+  }
+
+  /* ---------- Selectable options (1.1.1) ---------- */
+
+  ol.options li{
+    cursor:pointer;
+    border-radius:2px;
+    padding:3px 6px;
+    margin-left:-6px;
+    transition:background-color .12s;
+  }
+  ol.options li:hover{ background:var(--gold-pale); }
+  ol.options li.chosen{
+    background:var(--hl-topic-soft);
+    font-weight:500;
+    color:var(--obsidian);
+  }
+
+  /* ---------- Ruled writing panels ---------- */
+
+  .ruled{
+    background:
+      repeating-linear-gradient(
+        var(--parchment),
+        var(--parchment) 33px,
+        var(--line) 34px
+      );
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:8px 22px 8px;
+    margin:16px 0;
+    font-family:'Cormorant Garamond', serif;
+    font-size:17px;
+    color:var(--obsidian);
+    line-height:34px;
+  }
+
+  .ruled .prefix{ color:var(--obsidian-soft); font-style:italic; }
+
+  .ruled-wrap{
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+    margin:16px 0;
+  }
+
+  .ruled-prefix{
+    padding:14px 22px 10px;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:16px;
+    color:var(--obsidian-soft);
+    background:var(--parchment-deep);
+    border-bottom:1px solid var(--line);
+  }
+
+  .ruled-wrap .ruled{
+    margin:0;
+    border:none;
+    border-radius:0;
+  }
+
+  .ruled-label{
+    font-family:'DM Sans', sans-serif;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin:22px 0 8px;
+  }
+
+  /* ---------- Do / Don't table ---------- */
+
+  .rules-table{
+    width:100%;
+    border-collapse:collapse;
+    margin:24px 0;
+    font-size:14.5px;
+  }
+
+  .rules-table caption{
+    text-align:left;
+    font-family:'DM Sans', sans-serif;
+    font-weight:700;
+    font-size:12px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--obsidian);
+    margin-bottom:10px;
+  }
+
+  .rules-table th{
+    text-align:left;
+    font-family:'DM Sans', sans-serif;
+    font-weight:700;
+    font-size:12px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    padding:10px 14px;
+    border-bottom:1px solid var(--obsidian);
+  }
+
+  .rules-table td{
+    padding:14px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+
+  .mark{
+    display:inline-block;
+    width:16px;
+    text-align:center;
+    margin-right:6px;
+    font-weight:700;
+  }
+  .mark.yes{ color:var(--gold-deep); }
+  .mark.no{ color:var(--maroon); }
+
+  .structure-def{
+    margin:8px 0 18px;
+    font-size:14.5px;
+  }
+  .structure-def dt{
+    font-family:'DM Sans', sans-serif;
+    font-weight:700;
+    color:var(--obsidian);
+    margin-top:14px;
+  }
+  .structure-def dd{
+    margin:4px 0 0;
+    color:var(--obsidian-soft);
+  }
+
+  /* ---------- Reversed summary panel ---------- */
+
+  .summary-panel{
+    background:var(--obsidian);
+    color:var(--parchment-deep);
+    padding:32px 28px;
+    border-radius:var(--radius);
+    margin:30px 0;
+  }
+
+  .summary-panel .eyebrow{ color:var(--gold); }
+
+  .summary-panel ol{
+    margin:14px 0 0;
+    padding-left:20px;
+  }
+
+  .summary-panel li{
+    margin-bottom:14px;
+    font-size:14.5px;
+    line-height:1.75;
+  }
+
+  .summary-panel li em{
+    font-style:italic;
+    color:var(--gold);
+  }
+
+  .summary-panel li b{
+    font-weight:700;
+    color:#fff;
+  }
+
+  .summary-panel .compare{
+    display:block;
+    margin-top:4px;
+    color:#c9c5bb;
+    font-size:13.5px;
+  }
+
+  .summary-panel .compare .win{ color:var(--gold); }
+
+  /* ---------- Teacher tips marginalia ---------- */
+
+  .teacher-tips{
+    margin:26px 0;
+    padding:20px 22px;
+    border-left:2px solid var(--gold);
+    background:var(--gold-pale);
+    border-radius:0 var(--radius) var(--radius) 0;
+  }
+
+  .teacher-tips .specimen-tag{ display:block; margin-bottom:10px; }
+
+  .teacher-tips ul{
+    margin:0;
+    padding-left:18px;
+    font-size:14px;
+    font-style:italic;
+    color:var(--obsidian-soft);
+  }
+
+  .teacher-tips li{ margin-bottom:8px; }
+  .teacher-tips li:last-child{ margin-bottom:0; }
+
+  /* ---------- Numbered practice sets ---------- */
+
+  .problem-set{
+    margin-bottom:26px;
+    padding-bottom:24px;
+    border-bottom:1px dashed var(--line);
+  }
+  .problem-set:last-child{ border-bottom:none; }
+
+  .problem-head{
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+    margin-bottom:10px;
+  }
+
+  .problem-index{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:22px;
+    color:var(--gold);
+  }
+
+  .blank-line{
+    display:inline-block;
+    min-width:220px;
+    border-bottom:1px dotted var(--obsidian-soft);
+    margin-left:6px;
+  }
+
+  ol.options{
+    margin:10px 0 0;
+    padding-left:26px;
+    font-size:14.5px;
+  }
+  ol.options li{ margin-bottom:6px; }
+
+  /* ---------- Topic sentence lab (1.1.2) ---------- */
+
+  .lab{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin:26px 0;
+  }
+
+  .lab-card{
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px;
+    background:var(--parchment);
+  }
+
+  .lab-topic{
+    font-family:'DM Sans', sans-serif;
+    font-weight:700;
+    font-size:12px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin-bottom:14px;
+  }
+
+  .lab-card .given{
+    font-family:'Cormorant Garamond', serif;
+    font-size:16px;
+    color:var(--obsidian-soft);
+    margin-bottom:6px;
+  }
+
+  .key{
+    font-weight:700; color:var(--obsidian);
+  }
+  .stmt{
+    text-decoration:underline;
+    text-decoration-color:var(--gold-deep);
+  }
+  .numexp{
+    font-style:italic;
+    color:var(--maroon);
+  }
+
+  /* ---------- Footer ---------- */
+
+  footer{
+    margin-top:88px;
+    padding-top:26px;
+    border-top:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:11px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--obsidian-soft);
+    opacity:0.65;
+  }
+
+  @media (max-width:640px){
+    .triptych{ grid-template-columns:1fr; }
+    .lab{ grid-template-columns:1fr; }
+    header.masthead{ padding-top:40px; }
+    footer{ flex-direction:column; gap:8px; text-align:center; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="masthead">
+    <div class="wordmark">Harland Education<span>Writing Workshop</span></div>
+    <div class="rule"></div>
+    <p class="eyebrow">Unit 01</p>
+    <h1 class="title">Persuasive Body Paragraphs</h1>
+    <p class="lede">A persuasive body paragraph is a group of sentences about one topic. It can stand on its own, or appear inside an essay between the introduction and the conclusion.</p>
+  </header>
+
+  <section>
+    <p>When written with the correct structure, a body paragraph can be used to strongly argue almost any point, which is what makes it so powerful. For this reason, the body paragraph is one of the most influential forms of writing in the English language.</p>
+
+    <div class="triptych">
+      <div class="panel">
+        <span class="panel-num">1</span>
+        <div class="panel-title"><span class="dot topic"></span>Topic Sentence</div>
+        <ul class="panel-list">
+          <li>Main topic</li>
+          <li>Topic statement</li>
+          <li>Number expression <em>(optional)</em></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <span class="panel-num">2</span>
+        <div class="panel-title">Supporting Sentences</div>
+        <ul class="panel-list">
+          <li><span class="dot reasons"></span>Reasons</li>
+          <li><span class="dot evidence"></span>Examples / evidence</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <span class="panel-num">3</span>
+        <div class="panel-title"><span class="dot conclude"></span>Concluding Sentence</div>
+        <ul class="panel-list">
+          <li>Restatement, or</li>
+          <li>Opinion / suggestion, or</li>
+          <li>Prediction</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>Each of these three parts is dealt with in turn in the sections ahead. To begin, here is how they look put together.</p>
+
+    <div class="specimen">
+      <div class="specimen-label">
+        <span class="specimen-tag">Example Paragraph</span>
+        <span class="specimen-topic">Should Phones Be Allowed in the Classroom?</span>
+      </div>
+      <div class="specimen-body">
+        <span class="mk-topic">Students should be allowed to use phones in the classroom for three key reasons.</span>
+        <span class="mk-reasons">Firstly, phones can be used to look up information.</span> <span class="mk-evidence">For example, a student can use a phone to research their topic when writing a research assignment without requiring the use of a personal computer.</span> <span class="mk-reasons">Secondly, phones can be used to record key information during class time.</span> <span class="mk-evidence">In this way, when the teacher is explaining a key piece of information, students can record it and listen to the recording at a later date.</span> <span class="mk-reasons">Finally, phones can be used to call during an emergency.</span> <span class="mk-evidence">A recent study showed that 80% of all emergency service calls were made from cell phones.</span>
+        <span class="mk-conclude">For all these reasons, phones are a necessary tool that should be allowed in classrooms.</span>
+      </div>
+      <div class="legend">
+        <span class="legend-item"><span class="legend-swatch topic"></span>Topic sentence</span>
+        <span class="legend-item"><span class="legend-swatch reasons"></span>Reasons</span>
+        <span class="legend-item"><span class="legend-swatch evidence"></span>Examples &amp; evidence</span>
+        <span class="legend-item"><span class="legend-swatch conclude"></span>Concluding sentence</span>
+      </div>
+    </div>
+
+    <div class="exercise">
+      <span class="exercise-marker">1.0.1 &nbsp;·&nbsp; Highlight a Persuasive Body Paragraph</span>
+      <p class="exercise-prompt">Read the paragraph below. Choose a color, then tap each sentence to mark it as the topic sentence, a reason, an example or piece of evidence, or the concluding sentence.</p>
+      <div class="hl-toolbar" role="group" aria-label="Highlighter colors" data-target="hl-101">
+        <button type="button" class="hl-btn active" data-tool="topic">Topic</button>
+        <button type="button" class="hl-btn" data-tool="reasons">Reasons</button>
+        <button type="button" class="hl-btn" data-tool="evidence">Examples &amp; Evidence</button>
+        <button type="button" class="hl-btn" data-tool="conclude">Conclude</button>
+        <button type="button" class="hl-btn" data-tool="clear">Eraser</button>
+      </div>
+      <div class="specimen" style="margin-top:0;">
+        <div class="specimen-body hl-group" id="hl-101" style="padding-top:22px;">
+          <span class="hl-sentence" data-field="hl-1">Video games are good for kids in three key ways.</span> <span class="hl-sentence" data-field="hl-2">Firstly, video games help kids to improve their social connections.</span> <span class="hl-sentence" data-field="hl-3">For example, many kids play games with other people which helps them to make new friends and improve old friendships.</span> <span class="hl-sentence" data-field="hl-4">Secondly, video games help kids learn new skills.</span> <span class="hl-sentence" data-field="hl-5">For instance, hand-eye coordination is improved when children play games that need fast reflexes.</span> <span class="hl-sentence" data-field="hl-6">Finally, video games help kids by giving them an opportunity to destress.</span> <span class="hl-sentence" data-field="hl-7">A recent study suggests that students need time to relax after a long day at school, and video games are just one way to do that.</span> <span class="hl-sentence" data-field="hl-8">For all these reasons, video games play an important part in kids&rsquo; lives.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exercise">
+      <span class="exercise-marker">1.0.2 &nbsp;·&nbsp; Write a Paragraph</span>
+      <p class="exercise-prompt">Write a paragraph on the subject &ldquo;Why playing sports is good for kids.&rdquo; Include a topic sentence, supporting sentences (with examples or evidence), and a concluding sentence.</p>
+      <p class="exercise-note">Brainstorm first &mdash; try to generate four or five reasons, then choose the three best for your paragraph. The topic sentence has been written for you.</p>
+
+      <p class="ruled-label">Brainstorm</p>
+      <div class="ruled-wrap">
+        <div class="ruled-prefix">Playing sports is good for kids because&hellip;</div>
+        <div class="ruled editable" contenteditable="true" data-field="brainstorm" data-placeholder="Type your reasons here, one per line&hellip;" style="min-height:110px;"></div>
+      </div>
+
+      <p class="ruled-label">Paragraph</p>
+      <div class="ruled-wrap">
+        <div class="ruled-prefix">Playing sports is good for kids for three reasons. Firstly, &hellip;</div>
+        <div class="ruled editable" contenteditable="true" data-field="paragraph" data-placeholder="Continue writing your paragraph here&hellip;" style="min-height:180px;"></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">1.1</span>
+      <h2 class="section-title">The Topic Sentence</h2>
+    </div>
+
+    <p>The purpose of the topic sentence is to inform the reader of the one thing this paragraph is about, while expressing the writer&rsquo;s belief about the topic. It must include a main topic and a topic statement, and may include a number expression. This is the most important sentence in any body paragraph &mdash; get it right, and the rest of the paragraph will practically write itself.</p>
+
+    <dl class="structure-def">
+      <dt>Main Topic</dt>
+      <dd>The main subject of the paragraph. Usually one or two words, and usually a noun.</dd>
+      <dt>Topic Statement</dt>
+      <dd>The one thing the writer wishes to state about the main topic &mdash; their &ldquo;belief&rdquo; about it.</dd>
+      <dt>Number Expression <em>(optional)</em></dt>
+      <dd>The number of points the paragraph will make. Usually three works best.</dd>
+    </dl>
+
+    <table class="rules-table">
+      <caption>Do &amp; Don&rsquo;t</caption>
+      <thead>
+        <tr><th>Do</th><th>Don&rsquo;t</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="mark yes">&#10003;</span>Students should be allowed to use smartphones in the classroom for three key reasons.</td>
+          <td><span class="mark no">&#10005;</span>Smartphones are good for class. <em>&mdash; too general</em></td>
+        </tr>
+        <tr>
+          <td><span class="mark yes">&#10003;</span>Computers are a useful tool for people&rsquo;s lives in many ways.</td>
+          <td><span class="mark no">&#10005;</span>Computers can be used to send emails, surf the internet, and play video games. <em>&mdash; too specific</em></td>
+        </tr>
+        <tr>
+          <td><span class="mark yes">&#10003;</span>There are three must&#8209;see places to visit when traveling in Japan.</td>
+          <td><span class="mark no">&#10005;</span>Japan is nice to visit. <em>&mdash; too general, obvious fact</em></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="summary-panel">
+      <p class="eyebrow">Summary &mdash; The Topic Sentence</p>
+      <ol>
+        <li>Must have a <b>main topic</b> and a topic statement, and can include a <em>number expression</em>.
+          <span class="compare"><span class="win">Dolphins</span> are amazing animals <em>for three reasons.</em></span>
+        </li>
+        <li>Can&rsquo;t be too general, or the reader won&rsquo;t know what the paragraph is about.
+          <span class="compare"><span class="win">Computers</span> are great&hellip; <b>vs.</b> <span class="win">Computers</span> are useful at school <em>in three key ways.</em></span>
+        </li>
+        <li>Can&rsquo;t be too specific, or there will be nothing left to say.
+          <span class="compare">Japan is a great country because you can eat sushi in Tokyo&hellip; <b>vs.</b> <span class="win">Japan</span> is a great place to go on vacation <em>for three important reasons.</em></span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="teacher-tips">
+      <span class="specimen-tag">Teacher Tips</span>
+      <ul>
+        <li>The main topic is usually a noun, and only one or two words.</li>
+        <li>A topic statement is the author&rsquo;s belief about a subject.</li>
+        <li>A number expression says how many points will be made &mdash; e.g. &ldquo;for three reasons,&rdquo; &ldquo;in many ways.&rdquo; It isn&rsquo;t required, but it can effectively guide the writing.</li>
+        <li>Never start a topic sentence with &ldquo;I think&rdquo; &mdash; it sounds weak. &ldquo;I think&rdquo; or &ldquo;I believe&rdquo; is implied but never stated.</li>
+      </ul>
+    </div>
+
+    <div class="exercise">
+      <span class="exercise-marker">1.1.1 &nbsp;·&nbsp; Determine the Best Topic Sentence</span>
+      <p class="exercise-prompt">Read each group of sentences. Write the main topic in the space provided, then tap the sentence you think is the best topic sentence to highlight it, and be ready to explain your answer.</p>
+      <p class="exercise-note">If you&rsquo;re unsure, ask: &ldquo;If this were the topic sentence, what would the rest of the paragraph be about?&rdquo; If that&rsquo;s hard to answer, it probably isn&rsquo;t a good topic sentence.</p>
+
+      <div class="problem-set">
+        <div class="problem-head"><span class="problem-index">1</span>Main topic:<span class="blank-line editable" contenteditable="true" data-field="topic-1" data-placeholder="type here"></span></div>
+        <ol class="options" type="a" data-field="choice-1">
+          <li>Smartphones have a number of important features compared to regular phones.</li>
+          <li>Smartphones are expensive.</li>
+          <li>You can download apps on a smartphone.</li>
+        </ol>
+      </div>
+
+      <div class="problem-set">
+        <div class="problem-head"><span class="problem-index">2</span>Main topic:<span class="blank-line editable" contenteditable="true" data-field="topic-2" data-placeholder="type here"></span></div>
+        <ol class="options" type="a" data-field="choice-2">
+          <li>Pepperoni and mushrooms are my two favorite toppings on a pizza from Nino&rsquo;s Pizzeria.</li>
+          <li>Nino&rsquo;s Pizzeria has a wide selection of delicious food.</li>
+          <li>Nino&rsquo;s Pizzeria makes good chicken sandwiches.</li>
+        </ol>
+      </div>
+
+      <div class="problem-set">
+        <div class="problem-head"><span class="problem-index">3</span>Main topic:<span class="blank-line editable" contenteditable="true" data-field="topic-3" data-placeholder="type here"></span></div>
+        <ol class="options" type="a" data-field="choice-3">
+          <li>Some dolphins are gray.</li>
+          <li>Dolphins are quiet, friendly, unique, beautiful and smart.</li>
+          <li>Dolphins are one of nature&rsquo;s most incredible animals.</li>
+        </ol>
+      </div>
+
+      <div class="problem-set">
+        <div class="problem-head"><span class="problem-index">4</span>Main topic:<span class="blank-line editable" contenteditable="true" data-field="topic-4" data-placeholder="type here"></span></div>
+        <ol class="options" type="a" data-field="choice-4">
+          <li>Few people know the interesting history of snowboarding.</li>
+          <li>Snowboards are made of fiberglass and have sharp metal edges.</li>
+          <li>Snowboarding is a winter sport.</li>
+        </ol>
+      </div>
+
+      <div class="problem-set">
+        <div class="problem-head"><span class="problem-index">5</span>Main topic:<span class="blank-line editable" contenteditable="true" data-field="topic-5" data-placeholder="type here"></span></div>
+        <ol class="options" type="a" data-field="choice-5">
+          <li>My favorite seashell is orange and white.</li>
+          <li>My hobby is collecting seashells, but my brother&rsquo;s hobby is playing sports.</li>
+          <li>Seashells make great souvenirs for several reasons.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="exercise">
+      <span class="exercise-marker">1.1.2 &nbsp;·&nbsp; Write Topic Sentences</span>
+      <p class="exercise-prompt">Write a topic sentence for each topic below, including all three parts learned above. <b class="key">Bold</b> the main topic, <span class="stmt">underline</span> the topic statement, and <span class="numexp">italicize</span> the number expression.</p>
+
+      <div class="lab">
+        <div class="lab-card">
+          <div class="lab-topic">Topic &mdash; Badminton</div>
+          <p class="given"><span class="key">Badminton</span> <span class="stmt">is boring</span> <span class="numexp">for three key reasons.</span></p>
+          <p class="given"><span class="key">Badminton</span> <span class="stmt">is great exercise</span> <span class="numexp">for three reasons.</span></p>
+          <div class="ruled editable" contenteditable="true" data-field="badminton" data-placeholder="Write your topic sentence&hellip;" style="margin-top:14px; padding-top:8px; min-height:70px;"></div>
+        </div>
+        <div class="lab-card">
+          <div class="lab-topic">Topic &mdash; Air Pollution</div>
+          <p class="given"><span class="key">Air pollution</span> <span class="stmt">is harmful for the environment</span> <span class="numexp">in many ways.</span></p>
+          <div class="ruled editable" contenteditable="true" data-field="airpollution" data-placeholder="Write your topic sentence&hellip;" style="margin-top:14px; padding-top:8px; min-height:104px;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Harland Education</span>
+    <button type="button" id="reset-page" class="clear-link" style="margin:0;">Reset my answers</button>
+    <span>Writing Workshop &middot; Unit 01</span>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var STORAGE_KEY = 'harland-u1-persuasive-body-paragraphs-v2';
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch(e){ state = {}; }
+  function persist(){
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e){ /* storage unavailable in this view; edits still work for the session */ }
+  }
+
+  // ---- Editable text fields: brainstorm, paragraph, main-topic blanks, badminton, air pollution ----
+  document.querySelectorAll('[data-field].editable[contenteditable="true"]').forEach(function(el){
+    var key = el.getAttribute('data-field');
+    if(Object.prototype.hasOwnProperty.call(state, key)){ el.innerHTML = state[key]; }
+    el.addEventListener('input', function(){
+      if(el.textContent.trim() === ''){ el.innerHTML = ''; }
+      state[key] = el.innerHTML;
+      persist();
+    });
+  });
+
+  document.querySelectorAll('.blank-line.editable').forEach(function(el){
+    el.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); }
+    });
+  });
+
+  // ---- Highlighter toolbar (1.0.1) ----
+  var hlClasses = ['hl-topic','hl-reasons','hl-evidence','hl-conclude'];
+  document.querySelectorAll('.hl-toolbar').forEach(function(toolbar){
+    var group = document.getElementById(toolbar.getAttribute('data-target'));
+    if(!group) return;
+    var currentTool = 'topic';
+
+    toolbar.querySelectorAll('.hl-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        currentTool = btn.getAttribute('data-tool');
+        toolbar.querySelectorAll('.hl-btn').forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+      });
+    });
+
+    group.querySelectorAll('.hl-sentence[data-field]').forEach(function(sentence){
+      var key = sentence.getAttribute('data-field');
+      if(state[key]){ sentence.classList.add(state[key]); }
+
+      sentence.addEventListener('click', function(){
+        if(currentTool === 'clear'){
+          sentence.classList.remove.apply(sentence.classList, hlClasses);
+          delete state[key];
+          persist();
+          return;
+        }
+        var target = 'hl-' + currentTool;
+        var already = sentence.classList.contains(target);
+        sentence.classList.remove.apply(sentence.classList, hlClasses);
+        if(!already){
+          sentence.classList.add(target);
+          state[key] = target;
+        } else {
+          delete state[key];
+        }
+        persist();
+      });
+    });
+  });
+
+  // ---- Selectable "best sentence" options (1.1.1) ----
+  document.querySelectorAll('ol.options[data-field]').forEach(function(ol){
+    var key = ol.getAttribute('data-field');
+    var items = ol.querySelectorAll('li');
+    if(state[key] !== undefined && items[state[key]]){ items[state[key]].classList.add('chosen'); }
+
+    ol.addEventListener('click', function(e){
+      var li = e.target.closest('li');
+      if(!li || !ol.contains(li)) return;
+      var allItems = ol.querySelectorAll('li');
+      var wasChosen = li.classList.contains('chosen');
+      allItems.forEach(function(item){ item.classList.remove('chosen'); });
+      if(!wasChosen){
+        li.classList.add('chosen');
+        state[key] = Array.prototype.indexOf.call(allItems, li);
+      } else {
+        delete state[key];
+      }
+      persist();
+    });
+  });
+
+  // ---- Reset ----
+  var resetBtn = document.getElementById('reset-page');
+  if(resetBtn){
+    resetBtn.addEventListener('click', function(){
+      try { localStorage.removeItem(STORAGE_KEY); } catch(e){}
+      location.reload();
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
